@@ -1,0 +1,9 @@
+{
+  "name": "quizvault",
+  "version": "1.0.0",
+  "description": "QuizVault — General Purpose Quiz Tool",
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}

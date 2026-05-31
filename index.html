@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizVault — General Purpose Quiz Tool</title>
+    <meta name="description" content="QuizVault is a flexible, general-purpose quiz and assessment platform. Import your own materials and start quizzing instantly.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+    <!-- ═══════════ SCREEN 1: LANDING / SETUP ═══════════ -->
+    <div id="landing">
+        <div class="brand">
+            <span class="brand-icon">🧠</span>
+            <h1>QuizVault</h1>
+            <p>Drop materials into the vault. Quiz yourself on anything.</p>
+        </div>
+
+        <div class="setup-card glass-panel">
+            <!-- Material Selection -->
+            <div class="setup-section">
+                <div class="setup-label">
+                    <span class="label-icon">📚</span>
+                    Select Material
+                </div>
+                <div id="materialGrid" class="material-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Duration Picker -->
+            <div class="setup-section">
+                <div class="setup-label">
+                    <span class="label-icon">⏱️</span>
+                    Quiz Duration
+                </div>
+                <div class="duration-options" id="durationOptions">
+                    <button class="duration-btn" data-minutes="5">5 min</button>
+                    <button class="duration-btn" data-minutes="10">10 min</button>
+                    <button class="duration-btn selected" data-minutes="15">15 min</button>
+                    <button class="duration-btn" data-minutes="30">30 min</button>
+                    <button class="duration-btn" data-minutes="60">60 min</button>
+                    <div class="custom-duration-wrapper">
+                        <input type="number" class="custom-duration-input" id="customDuration" min="1" max="180" placeholder="—">
+                        <span class="custom-duration-label">min</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Start Button -->
+            <button class="start-btn" id="startBtn" disabled>
+                Select a material to start
+            </button>
+        </div>
+    </div>
+
+    <!-- ═══════════ SCREEN 2: QUIZ ═══════════ -->
+    <div id="quizScreen" class="hidden">
+        <!-- Sidebar Navigation -->
+        <aside id="questionNav">
+            <div class="nav-header">
+                <div class="nav-title">Questions</div>
+                <div class="nav-legend">
+                    <div class="legend-item"><span class="legend-dot dot-current"></span>Current</div>
+                    <div class="legend-item"><span class="legend-dot dot-answered"></span>Answered</div>
+                    <div class="legend-item"><span class="legend-dot dot-marked"></span>Marked</div>
+                    <div class="legend-item"><span class="legend-dot dot-unanswered"></span>Empty</div>
+                </div>
+            </div>
+            <div class="nav-grid" id="navGrid">
+                <!-- Populated by JS -->
+            </div>
+        </aside>
+
+        <!-- Main Quiz Content -->
+        <div id="quizContent">
+            <!-- Header -->
+            <div class="quiz-header">
+                <div class="quiz-meta">
+                    <span class="quiz-material-badge" id="quizMaterialBadge">—</span>
+                    <span class="quiz-progress-text">
+                        Question <span id="currentQ">1</span> of <span id="totalQ">0</span>
+                    </span>
+                </div>
+                <div class="quiz-timer">
+                    <div class="timer-display" id="timerDisplay">
+                        <span class="timer-icon">⏱️</span>
+                        <span id="timerText">15:00</span>
+                    </div>
+                    <button class="pause-btn" id="pauseBtn">⏸ Pause</button>
+                </div>
+            </div>
+
+            <!-- Question Area -->
+            <div class="question-area">
+                <div class="question-text" id="questionText"></div>
+                <div class="options-list" id="optionsList">
+                    <!-- Populated by JS -->
+                </div>
+
+                <label class="mark-review" id="markReviewLabel">
+                    <input type="checkbox" id="markReview">
+                    <span class="review-check">✓</span>
+                    Mark for Review
+                </label>
+            </div>
+
+            <!-- Footer -->
+            <div class="quiz-footer">
+                <button class="quiz-nav-btn" id="prevBtn" disabled>← Previous</button>
+                <button class="submit-btn" id="submitBtn">Submit Quiz</button>
+                <button class="quiz-nav-btn" id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════ SCREEN 3: REVIEW ═══════════ -->
+    <div id="reviewScreen" class="hidden">
+        <!-- Score Hero -->
+        <div class="score-hero glass-panel">
+            <div class="score-ring-container">
+                <canvas id="scoreCanvas" width="360" height="360"></canvas>
+                <div class="score-center">
+                    <div class="score-value" id="scoreValue">0%</div>
+                    <div class="score-label">Score</div>
+                </div>
+            </div>
+            <div class="score-title" id="scoreTitle">Quiz Complete!</div>
+            <div class="score-subtitle" id="scoreSubtitle">—</div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-card glass-panel">
+                <div class="stat-value correct" id="statCorrect">0</div>
+                <div class="stat-label">Correct</div>
+            </div>
+            <div class="stat-card glass-panel">
+                <div class="stat-value incorrect" id="statIncorrect">0</div>
+                <div class="stat-label">Incorrect</div>
+            </div>
+            <div class="stat-card glass-panel">
+                <div class="stat-value unanswered" id="statUnanswered">0</div>
+                <div class="stat-label">Unanswered</div>
+            </div>
+            <div class="stat-card glass-panel">
+                <div class="stat-value time-stat" id="statTime">—</div>
+                <div class="stat-label">Time Spent</div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="review-actions">
+            <button class="review-action-btn primary" id="retakeBtn">🔄 Retake Quiz</button>
+            <button class="review-action-btn secondary" id="homeBtn">🏠 Back to Home</button>
+        </div>
+
+        <!-- Filter -->
+        <div class="review-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="incorrect">❌ Incorrect</button>
+            <button class="filter-btn" data-filter="correct">✅ Correct</button>
+            <button class="filter-btn" data-filter="marked">🔖 Marked</button>
+        </div>
+
+        <!-- Review Cards -->
+        <div class="review-list" id="reviewList">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- ═══════════ MODALS ═══════════ -->
+    <div id="submitModal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3>Submit Quiz?</h3>
+            <p id="modalText">You have answered 0 of 0 questions. Are you sure you want to submit?</p>
+            <div class="modal-actions">
+                <button class="modal-btn cancel" id="modalCancel">Cancel</button>
+                <button class="modal-btn confirm" id="modalConfirm">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="pauseOverlay" class="pause-overlay hidden">
+        <div class="pause-icon">⏸️</div>
+        <h2>Quiz Paused</h2>
+        <p>Take a break. Your progress is saved.</p>
+        <button class="resume-btn" id="resumeBtn">▶ Resume</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+[
+  {
+    "question": "She _____ to school every day by bus.",
+    "options": ["go", "goes", "going", "gone"],
+    "answer": 1,
+    "explanation": "Untuk subject orang ketiga tunggal (she/he/it), kata kerja ditambahkan akhiran -s atau -es. 'Go' menjadi 'goes'."
+  },
+  {
+    "question": "The Earth _____ around the Sun.",
+    "options": ["revolve", "revolves", "is revolving", "revolved"],
+    "answer": 1,
+    "explanation": "Simple present tense digunakan untuk menyatakan fakta ilmiah atau kebenaran umum. Subject 'The Earth' adalah orang ketiga tunggal, sehingga kata kerja harus ditambah -s: 'revolves'."
+  },
+  {
+    "question": "Which sentence uses the Simple Present Tense CORRECTLY?",
+    "options": [
+      "He don't like coffee.",
+      "They doesn't play tennis.",
+      "She doesn't eat meat.",
+      "We doesn't go there."
+    ],
+    "answer": 2,
+    "explanation": "'She doesn't eat meat' adalah benar. Untuk subject orang ketiga tunggal (she), gunakan 'doesn't' sebagai bentuk negatif, diikuti oleh base form kata kerja."
+  },
+  {
+    "question": "_____ your brother work at the hospital?",
+    "options": ["Do", "Does", "Is", "Are"],
+    "answer": 1,
+    "explanation": "Untuk pertanyaan yes/no dengan subject orang ketiga tunggal (your brother = he), gunakan auxiliary verb 'Does' di awal kalimat, lalu diikuti base form kata kerja."
+  },
+  {
+    "question": "The students _____ their homework every night.",
+    "options": ["does", "do", "doing", "is doing"],
+    "answer": 1,
+    "explanation": "'The students' adalah subject jamak (plural), sehingga kata kerja tidak ditambah -s/-es: 'do'. Bentuk 'does' hanya untuk subject tunggal orang ketiga (he/she/it)."
+  },
+  {
+    "question": "Water _____ at 100 degrees Celsius.",
+    "options": ["boil", "boils", "is boiling", "boiled"],
+    "answer": 1,
+    "explanation": "Simple present tense digunakan untuk fakta ilmiah. 'Water' adalah subject tunggal, sehingga kata kerja ditambah -s: 'boils'."
+  },
+  {
+    "question": "I _____ three languages: English, French, and Spanish.",
+    "options": ["speaks", "is speaking", "speak", "spoke"],
+    "answer": 2,
+    "explanation": "Untuk subject 'I', kata kerja dalam simple present tidak ditambah -s/-es. 'Speak' adalah bentuk yang benar untuk menyatakan kemampuan atau kebiasaan."
+  },
+  {
+    "question": "My parents _____ in Jakarta.",
+    "options": ["lives", "live", "is living", "are lives"],
+    "answer": 1,
+    "explanation": "'My parents' adalah subject jamak, sehingga kata kerja tidak ditambah -s/-es: 'live'. Bentuk 'lives' hanya untuk he/she/it."
+  },
+  {
+    "question": "Which sentence is in Simple Present Tense and describes a HABITUAL action?",
+    "options": [
+      "She was cooking dinner right now.",
+      "He usually reads the newspaper in the morning.",
+      "They were playing football yesterday.",
+      "We will go to the market tomorrow."
+    ],
+    "answer": 1,
+    "explanation": "'He usually reads the newspaper in the morning' menggunakan simple present dengan adverb of frequency 'usually' untuk menunjukkan kebiasaan (habitual action)."
+  },
+  {
+    "question": "The museum _____ at nine o'clock every morning.",
+    "options": ["open", "opens", "is opening", "opened"],
+    "answer": 1,
+    "explanation": "Simple present tense digunakan untuk jadwal atau rutinitas. 'The museum' adalah subject tunggal, sehingga kata kerja ditambah -s: 'opens'."
+  },
+  {
+    "question": "_____ they speak English fluently?",
+    "options": ["Does", "Do", "Is", "Are"],
+    "answer": 1,
+    "explanation": "Untuk pertanyaan dengan subject jamak (they), gunakan 'Do' sebagai auxiliary verb, diikuti base form kata kerja."
+  },
+  {
+    "question": "He _____ not understand the question.",
+    "options": ["do", "does", "is", "are"],
+    "answer": 1,
+    "explanation": "Untuk bentuk negatif simple present dengan subject orang ketiga tunggal (he), gunakan 'does not' atau 'doesn't'. Kalimat lengkapnya: 'He does not understand the question.'"
+  },
+  {
+    "question": "The committee _____ a meeting every Monday.",
+    "options": ["hold", "holds", "are holding", "held"],
+    "answer": 1,
+    "explanation": "'The committee' meskipun terdiri dari banyak orang, diperlakukan sebagai singular collective noun. Kata kerja ditambah -s: 'holds'."
+  },
+  {
+    "question": "Scientists say that the polar ice caps _____ due to global warming.",
+    "options": ["melt", "melts", "is melting", "melted"],
+    "answer": 0,
+    "explanation": "'The polar ice caps' adalah subject jamak. Dalam simple present untuk menyatakan fakta umum, gunakan base form tanpa -s: 'melt'."
+  },
+  {
+    "question": "She always _____ her keys somewhere and forgets where they are.",
+    "options": ["loses", "lose", "is losing", "lost"],
+    "answer": 0,
+    "explanation": "'She' adalah orang ketiga tunggal. Dengan adverb of frequency 'always', kalimat menggunakan simple present. Kata kerja 'lose' menjadi 'loses' untuk he/she/it."
+  },
+  {
+    "question": "Which of the following is NOT a correct use of Simple Present Tense?",
+    "options": [
+      "I wake up at 6 AM every day.",
+      "The train departs at 8 PM tonight.",
+      "She was studying at the library right now.",
+      "Dogs bark when they sense danger."
+    ],
+    "answer": 2,
+    "explanation": "'She was studying at the library right now' tidak benar karena 'was studying' adalah past continuous, bukan simple present. Seharusnya: 'She is studying at the library right now' (present continuous) atau kalimat tersebut tidak menggunakan simple present."
+  },
+  {
+    "question": "The airline _____ three flights to Bali every week.",
+    "options": ["operate", "operates", "is operating", "operated"],
+    "answer": 1,
+    "explanation": "'The airline' adalah subject tunggal. Simple present digunakan untuk jadwal rutin: 'operates'. Untuk subject tunggal orang ketiga, kata kerja ditambah -s/-es."
+  },
+  {
+    "question": "Both the manager and his assistant _____ to attend the conference.",
+    "options": ["wants", "want", "is wanting", "are wants"],
+    "answer": 1,
+    "explanation": "Ketika dua subject dihubungkan oleh 'both ... and ...', kata kerja harus dalam bentuk plural: 'want'. Tidak ada -s pada kata kerja untuk subject jamak."
+  },
+  {
+    "question": "My dog always _____ when strangers come to the house.",
+    "options": ["bark", "barks", "is barking", "barked"],
+    "answer": 1,
+    "explanation": "'My dog' adalah subject tunggal orang ketiga. Dengan adverb of frequency 'always', gunakan simple present: 'barks'. Kata kerja ditambah -s untuk he/she/it."
+  },
+  {
+    "question": "The correct negative form of 'She likes classical music' is:",
+    "options": [
+      "She not likes classical music.",
+      "She don't like classical music.",
+      "She doesn't likes classical music.",
+      "She doesn't like classical music."
+    ],
+    "answer": 3,
+    "explanation": "Bentuk negatif yang benar untuk subject orang ketiga tunggal adalah 'doesn't' + base form kata kerja. Setelah 'doesn't', kata kerja tidak ditambah -s/-es: 'She doesn't like classical music.'"
+  }
+]
