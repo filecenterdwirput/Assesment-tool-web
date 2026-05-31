@@ -1,0 +1,222 @@
+[
+  {
+    "question": "Apa sintaksis yang digunakan untuk mengaktifkan mode pengecekan tipe data yang ketat (strict typing) di PHP?",
+    "options": [
+      "declare(strict = 1);",
+      "declare(strict_types=1);",
+      "set(strict_types=1);",
+      "ini_set('strict_types', 1);"
+    ],
+    "answer": 1,
+    "explanation": "Sintaksis yang benar di PHP untuk mengaktifkan strict typing di awal file adalah `declare(strict_types=1);`."
+  },
+  {
+    "question": "Manakah di bawah ini yang semuanya termasuk ke dalam tipe data skalar di PHP?",
+    "options": [
+      "string, int, float, bool",
+      "string, int, array, object",
+      "int, float, null, resource",
+      "array, object, callable"
+    ],
+    "answer": 0,
+    "explanation": "Tipe data skalar di PHP adalah tipe data yang hanya menampung satu nilai, yaitu string, integer, float (floating-point), dan boolean."
+  },
+  {
+    "question": "Manakah yang termasuk ke dalam tipe data compound (majemuk) di PHP?",
+    "options": [
+      "string dan int",
+      "null dan resource",
+      "array dan object",
+      "bool dan callable"
+    ],
+    "answer": 2,
+    "explanation": "Tipe data compound dapat menampung lebih dari satu nilai atau nilai yang kompleks, yang terdiri dari array dan object."
+  },
+  {
+    "question": "Bagaimana cara mengubah (casting) variabel bertipe string $s = \"42\"; menjadi integer secara eksplisit?",
+    "options": [
+      "$n = int($s);",
+      "$n = (integer) $s; atau $n = (int) $s;",
+      "$n = toInt($s);",
+      "$n = $s->toInt();"
+    ],
+    "answer": 1,
+    "explanation": "Casting ke integer di PHP dilakukan dengan menambahkan `(int)` atau `(integer)` di depan variabel yang ingin diubah."
+  },
+  {
+    "question": "Jika dilakukan casting $f = (float) \"3.14\";, apa tipe data dan nilai dari variabel $f?",
+    "options": [
+      "String \"3.14\"",
+      "Integer 3",
+      "Float 3.14",
+      "Boolean true"
+    ],
+    "answer": 2,
+    "explanation": "Casting string \"3.14\" dengan `(float)` akan mengubahnya menjadi tipe data float dengan nilai numerik 3.14."
+  },
+  {
+    "question": "Jika variabel integer bernilai 1 di-cast ke boolean ((bool) 1), apa hasil nilainya?",
+    "options": [
+      "false",
+      "true",
+      "1",
+      "null"
+    ],
+    "answer": 1,
+    "explanation": "Dalam PHP, nilai integer 1 jika dikonversi menjadi boolean akan bernilai true."
+  },
+  {
+    "question": "Sintaksis apa yang digunakan untuk mengubah sebuah objek $obj menjadi array?",
+    "options": [
+      "$a = array_convert($obj);",
+      "$a = (array) $obj;",
+      "$a = $obj->toArray();",
+      "$a = settype($obj, 'array');"
+    ],
+    "answer": 1,
+    "explanation": "Explicit casting dari objek ke array dapat dilakukan dengan mudah menggunakan operator `(array)` di depan variabel objek tersebut."
+  },
+  {
+    "question": "Setiap baris pernyataan (statement) di dalam PHP harus diakhiri dengan karakter...",
+    "options": [
+      ". (Titik)",
+      ": (Titik dua)",
+      ", (Koma)",
+      "; (Titik koma)"
+    ],
+    "answer": 3,
+    "explanation": "Dalam PHP, titik koma (;) digunakan sebagai penanda akhir dari sebuah pernyataan (statement terminator)."
+  },
+  {
+    "question": "Di mana variabel dengan scope Global dideklarasikan?",
+    "options": [
+      "Di dalam fungsi",
+      "Di luar fungsi",
+      "Di dalam kelas saja",
+      "Di dalam loop foreach"
+    ],
+    "answer": 1,
+    "explanation": "Variabel global adalah variabel yang dideklarasikan di luar fungsi atau kelas dan memiliki cakupan di seluruh skrip utama."
+  },
+  {
+    "question": "Keyword apa yang digunakan untuk mengakses variabel global dari dalam lingkungan fungsi?",
+    "options": [
+      "extern",
+      "local",
+      "global atau via $GLOBALS",
+      "static"
+    ],
+    "answer": 2,
+    "explanation": "Untuk memanggil variabel global ke dalam scope lokal fungsi, kita menggunakan keyword `global` atau array superglobal `$GLOBALS`."
+  },
+  {
+    "question": "Apa karakteristik utama dari variabel static yang dideklarasikan di dalam sebuah fungsi?",
+    "options": [
+      "Nilainya akan selalu di-reset menjadi 0 setiap fungsi dipanggil",
+      "Nilainya tetap bertahan (persist) antar pemanggilan fungsi",
+      "Variabel tersebut bisa diakses langsung dari luar fungsi",
+      "Variabel tersebut tidak bisa diubah nilainya"
+    ],
+    "answer": 1,
+    "explanation": "Variabel `static` dalam fungsi tidak akan dihapus dari memori setelah fungsi selesai dieksekusi, sehingga nilainya tetap bertahan pada pemanggilan fungsi berikutnya."
+  },
+  {
+    "question": "Perhatikan kode fungsi counter() yang menggunakan static $count = 0; dan me-return ++$count. Jika dipanggil dua kali (echo counter(); echo counter();), apa outputnya?",
+    "options": [
+      "00",
+      "11",
+      "12",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "Panggilan pertama akan mengembalikan 1. Karena `$count` adalah static, nilai 1 disimpan. Panggilan kedua akan menambahkan 1 lagi menjadi 2. Sehingga outputnya adalah 12."
+  },
+  {
+    "question": "Manakah cara yang valid untuk mendefinisikan konstanta di PHP berdasarkan materi?",
+    "options": [
+      "const APP_NAME = 'Study App'; dan define('MAX_USERS', 100);",
+      "$const APP_NAME = 'Study App';",
+      "constant('APP_NAME', 'Study App');",
+      "set('APP_NAME', 'Study App');"
+    ],
+    "answer": 0,
+    "explanation": "PHP menyediakan dua cara utama untuk membuat konstanta, yaitu menggunakan keyword `const` dan fungsi `define()`."
+  },
+  {
+    "question": "Perintah dasar apa yang digunakan untuk menampilkan nilai variabel $name ke layar/browser?",
+    "options": [
+      "print_display $name;",
+      "echo $name;",
+      "response($name);",
+      "read $name;"
+    ],
+    "answer": 1,
+    "explanation": "`echo` adalah perintah dasar di PHP yang paling sering digunakan untuk mencetak string atau nilai variabel ke layar."
+  },
+  {
+    "question": "Manakah di bawah ini yang dikategorikan sebagai tipe data Special di PHP?",
+    "options": [
+      "int dan float",
+      "array dan object",
+      "null, resource, dan callable",
+      "string dan bool"
+    ],
+    "answer": 2,
+    "explanation": "Tipe data spesial di PHP mencakup `null` (variabel tanpa nilai), `resource` (referensi ke resource eksternal seperti koneksi database), dan `callable` (fungsi atau method yang bisa dipanggil)."
+  },
+  {
+    "question": "Tag pembuka standar untuk menuliskan kode PHP adalah...",
+    "options": [
+      "<script>",
+      "<?php",
+      "<php>",
+      "<?"
+    ],
+    "answer": 1,
+    "explanation": "Tag `<?php` adalah tag pembuka standar dan direkomendasikan untuk blok kode PHP agar kompatibel di semua server."
+  },
+  {
+    "question": "Mengubah tipe data dengan menambahkan tanda kurung tipe data di depan variabel (seperti (int) $s) disebut dengan...",
+    "options": [
+      "Type Hinting",
+      "Implicit Casting",
+      "Explicit Casting (Type Casting)",
+      "Juggling Type"
+    ],
+    "answer": 2,
+    "explanation": "Menuliskan tipe data tujuan di dalam kurung sebelum variabel disebut explicit casting (atau type casting), karena kita secara sadar dan eksplisit memerintahkan perubahan tipe."
+  },
+  {
+    "question": "Jika kita melakukan casting string kosong \"\" ke boolean ((bool) \"\"), maka hasilnya adalah...",
+    "options": [
+      "true",
+      "false",
+      "null",
+      "Error"
+    ],
+    "answer": 1,
+    "explanation": "String kosong `\"\"`, nilai `0`, array kosong, dan `null` akan dievaluasi menjadi `false` ketika di-cast ke tipe data boolean di PHP."
+  },
+  {
+    "question": "Berdasarkan deklarasi function counter(): int, tipe data apa yang wajib dikembalikan oleh fungsi tersebut?",
+    "options": [
+      "string",
+      "float",
+      "int (Integer)",
+      "void"
+    ],
+    "answer": 2,
+    "explanation": "Penanda `: int` di akhir deklarasi fungsi adalah return type declaration yang mewajibkan fungsi tersebut untuk mengembalikan nilai bertipe integer."
+  },
+  {
+    "question": "Berdasarkan catatan materi, bagaimana rekomendasi penggunaan global atau $GLOBALS untuk mengakses variabel global di dalam fungsi?",
+    "options": [
+      "Harus digunakan sesering mungkin",
+      "Hindari penggunaan secara berlebihan",
+      "Hanya boleh digunakan untuk tipe data array",
+      "Tidak disarankan sama sekali karena sudah deprecated"
+    ],
+    "answer": 1,
+    "explanation": "Penggunaan variabel global di dalam fungsi sebaiknya dihindari karena dapat membuat kode sulit diuji dan di-debug. Sebaiknya gunakan parameter fungsi (dependency injection)."
+  }
+]
