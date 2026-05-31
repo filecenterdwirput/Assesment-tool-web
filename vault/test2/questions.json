@@ -1,0 +1,9 @@
+[
+  {
+    "question": "ini test.",
+    "options": ["test", "goes", "going", "gone"],
+    "answer": 1,
+    "explanation": "Untuk subject orang ketiga tunggal (she/he/it), kata kerja ditambahkan akhiran -s atau -es. 'Go' menjadi 'goes'."
+  }
+
+]
